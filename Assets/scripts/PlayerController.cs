@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float runSpeed;
     public float currentSpeed;
     public float jumpForce;
+    public float gravity;
     float xMove; // переменная движения вперед/назад
     float zMove; // движегие вдево/вправо
 
@@ -40,7 +41,7 @@ public class PlayerController : MonoBehaviour
                 moveDirection.y += jumpForce;
             }
         }
-        moveDirection.y -= 0.1f;
+        moveDirection.y -= gravity;
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
