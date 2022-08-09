@@ -6,16 +6,16 @@ NavMeshProjectSettings:
   serializedVersion: 2
   areas:
   - name: Walkable
-    cost: 1
+    cost: 3
   - name: Not Walkable
     cost: 1
   - name: Jump
     cost: 2
-  - name: 
+  - name: snow
+    cost: 5
+  - name: hymanzone
     cost: 1
-  - name: 
-    cost: 1
-  - name: 
+  - name: alienzone
     cost: 1
   - name: 
     cost: 1
@@ -92,7 +92,7 @@ NavMeshProjectSettings:
   - serializedVersion: 2
     agentTypeID: -1372625422
     agentRadius: 0.72
-    agentHeight: 0.86
+    agentHeight: 1.59
     agentSlope: 45
     agentClimb: 0.4
     ledgeDropHeight: 0
