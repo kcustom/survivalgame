@@ -14,7 +14,7 @@ NavMeshProjectSettings:
   - name: snow
     cost: 5
   - name: hymanzone
-    cost: 1
+    cost: 4
   - name: alienzone
     cost: 1
   - name: 
@@ -37,8 +37,8 @@ NavMeshProjectSettings:
     cost: 1
   - name: 
     cost: 1
-  - name: 
-    cost: 1
+  - name: ducks
+    cost: 10
   - name: 
     cost: 1
   - name: 

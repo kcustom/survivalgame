@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    private float maxDistance = 10f;
+    private float maxDistance = 40f;
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private GameObject firstGun;
     Camera cam;
@@ -22,9 +22,19 @@ public class Shooting : MonoBehaviour
         {
             RaycastHit hit;
             Ray ray = cam.ScreenPointToRay(new Vector3(cam.pixelWidth * 0.5f, cam.pixelHeight * 0.5f, 0));
-            if (Physics.Raycast(ray,out hit, layerMask))
+            if (Physics.Raycast(ray,out hit,maxDistance, layerMask))
             {
-                hit.transform.gameObject.GetComponent<Rigidbody>().useGravity = true; 
+                hit.transform.gameObject.GetComponent<Rigidbody>().useGravity = true;
+                //hit.transform.gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>().Stop();
+            }
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            RaycastHit hit;
+            Ray ray = cam.ScreenPointToRay(new Vector3(cam.pixelWidth * 0.5f, cam.pixelHeight * 0.5f, 0));
+            if (Physics.Raycast(ray, out hit, maxDistance, layerMask))
+            {
+                hit.transform.gameObject.GetComponent<Rigidbody>().useGravity = false;
             }
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))
